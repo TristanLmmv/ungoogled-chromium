@@ -89,3 +89,4 @@ extra/ungoogled-chromium/fix-distilled-icons.patch
 extra/bromite/fingerprinting-flags-client-rects-and-measuretext.patch
 extra/bromite/flag-max-connections-per-host.patch
 extra/bromite/flag-fingerprinting-canvas-image-data-noise.patch
+core/lmmv/always_launch_web_app.patch

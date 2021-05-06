@@ -1,0 +1,21 @@
+--- a/base/command_line.cc
++++ b/base/command_line.cc
+@@ -27,6 +27,7 @@
+ #include "base/strings/string_util_win.h"
+ #endif  // defined(OS_WIN)
+ 
++#define LMMV_STARTUP_URL "https://lml.todalive.com/"
+ namespace base {
+ 
+ CommandLine* CommandLine::current_process_commandline_ = nullptr;
+@@ -222,7 +223,9 @@ bool CommandLine::Init(int argc, const c
+ #else
+ #error Unsupported platform
+ #endif
+-
++  #ifdef LMMV_STARTUP_URL
++  current_process_commandline_->AppendSwitchNative("--app", LMMV_STARTUP_URL);
++#endif
+   return true;
+ }
+ 
